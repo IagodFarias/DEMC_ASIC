@@ -1,0 +1,39 @@
+cd ~/projetos_cadence/DEMC_ASIC
+
+# 1. Inicializa o repositório Git
+git init
+
+# 2. Cria os arquivos .gitkeep para garantir que pastas vazias sejam versionadas
+touch doc/.gitkeep sim/.gitkeep synth/.gitkeep pnr/.gitkeep rtl/ecc/.gitkeep rtl/detm/.gitkeep rtl/backend/.gitkeep tb/.gitkeep
+
+# 3. Cria o arquivo .gitignore para ignorar arquivos temporários
+cat << 'EOF' > .gitignore
+# ==========================================
+# .gitignore para Fluxo ASIC (Cadence/IHP)
+# ==========================================
+
+# Arquivos de log e histórico
+*.log
+*.log.*
+*.cmd
+*.key
+*.jou
+*.history
+
+# Diretórios de simulação e compilação (Xcelium/Incisive)
+INCA_libs/
+xcelium.d/
+waves.shm/
+*.vcd
+
+# Ignorar o conteúdo gerado de síntese e PnR, mas manter as pastas
+synth/*
+!synth/.gitkeep
+pnr/*
+!pnr/.gitkeep
+sim/*
+!sim/.gitkeep
+
+# Ignorar arquivos de mapeamento local que contêm caminhos absolutos
+cds.lib
+setup/cds.lib
