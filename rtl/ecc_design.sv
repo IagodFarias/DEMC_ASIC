@@ -1,10 +1,3 @@
-`include "TBEC_RSC_encoder.sv"
-`include "TBEC_RSC_decoder.sv"
-`include "MRSC_encoder.sv"
-`include "MRSC_decoder.sv"
-//`include "EDACencoder.sv"
-//`include "EDACdecoder.sv"
-
 module ecc_design(input logic [0:15] data_in_left, // entrada FPGA pelo processador
                   output logic [0:15] data_out_right_up, // saída memória 1
                   output logic [0:15] data_out_right_down, // saída memória 2
