@@ -57,6 +57,23 @@ module ecc_design(input logic [0:15] data_in_left, // entrada FPGA pelo processa
             data_out_left =  decoder_output2;
             chip_sel_out = {chip_sel,chip_sel};
                 end
+3'b100 : begin // ECC3 
+            data_out_right_up   = encoder_output3[0:15];
+            data_out_right_down = encoder_output3[16:31];
+            data_out_left       = decoder_output3;
+            chip_sel_out        = {chip_sel, chip_sel};
+        end
+        
+        3'b101 : begin // ECC4 
+            data_out_right_up   = encoder_output4[0:15];
+            data_out_right_down = encoder_output4[16:31];
+            data_out_left       = decoder_output4;
+            chip_sel_out        = {chip_sel, chip_sel};
+        end
+
+
+
+
         default: begin
             // error
             data_out_right_up   = data_in_left;
