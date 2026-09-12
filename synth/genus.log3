@@ -1,0 +1,28 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 21.10-p002_1, built Fri Aug 20 06:13:13 PDT 2021
+Options: 
+Date:    Wed Sep 02 00:06:45 2026
+Host:    semb (x86_64 w/Linux 4.18.0-553.137.1.el8_10.x86_64) (20cores*28cpus*1physical cpu*Intel(R) Core(TM) i7-14700K 33792KB) (48879768KB)
+PID:     1734590
+OS:      Rocky Linux release 8.10 (Green Obsidian)
+
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...Using chipware dir from user defined $CW_DIR envirionment variable set to /home/tools/cadence/installs/GENUS211/tools.lnx86/lib/chipware
+
+Finished loading tool scripts (4 seconds elapsed).
+
+WARNING: This version of the tool is 1838 days old.
+Error   : No designs are available. A design must first be read in and elaborated. [TUI-10] [check_design]
+        : There is no design here.
+        : A design must first be read in with 'read_hdl' command and elaborated with 'elaborate' command.

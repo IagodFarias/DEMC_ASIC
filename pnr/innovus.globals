@@ -1,0 +1,14 @@
+set init_verilog "ecc_design_synth.v"
+set init_top_cell "ecc_design"
+set init_design_settop 1
+set init_design_netlisttype "Verilog"
+
+# Aponta para as regras de roteamento (TECH) e geometria (CELL)
+set init_lef_file "/home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef /home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef"
+
+# Carrega o arquivo MMMC criado no passo anterior
+set init_mmmc_file "mmmc.view"
+
+# Define as redes globais de alimentacao (verifique se sao VDD/VSS no seu caso)
+set init_pwr_net "VDD"
+set init_gnd_net "VSS"

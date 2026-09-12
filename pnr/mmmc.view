@@ -1,0 +1,13 @@
+# Define a biblioteca de timing tipica (1.20V, 25C)
+create_library_set -name typ_lib -timing {/home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib}
+
+# Cria os corners de RC (resistencia e capacitancia) e delay
+create_rc_corner -name default_rc -T 25
+create_delay_corner -name default_delay -library_set {typ_lib} -rc_corner {default_rc}
+
+# Aponta para o arquivo SDC exportado pelo Genus
+create_constraint_mode -name default_constraint -sdc_files {ecc_design_synth.sdc}
+
+# Cria e aplica a view de analise para setup e hold
+create_analysis_view -name typ_view -delay_corner {default_delay} -constraint_mode {default_constraint}
+set_analysis_view -setup {typ_view} -hold {typ_view}

@@ -1,0 +1,83 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Sep-12 11:54:24 (2026-Sep-12 14:54:24 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: ecc_design
+*
+*	Liberty Libraries used: 
+*	        typ_view: /home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:        1.2 
+*
+*       Power View : typ_view
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: N.A.
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile ../pnr/power_final.rpt
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.06748960 	   42.2794%
+Total Switching Power:       0.09208944 	   57.6901%
+Total Leakage Power:         0.00004869 	    0.0305%
+Total Power:                 0.15962773 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                       0.01158    0.002675   1.191e-06     0.01426        8.93 
+Macro                                  0           0           0           0           0 
+IO                                     0           0           0           0           0 
+Combinational                    0.05591     0.08941    4.75e-05      0.1454       91.07 
+Clock (Combinational)                  0           0           0           0           0 
+Clock (Sequential)                     0           0           0           0           0 
+-----------------------------------------------------------------------------------------
+Total                            0.06749     0.09209   4.869e-05      0.1596         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                       1.2    0.06749     0.09209   4.869e-05      0.1596         100 
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power:   decodificador1_bit1_reg (sg13g2_dlhrq_1):         0.005122 
+*                Highest Leakage Power:   decodificador1_bit1_reg (sg13g2_dlhrq_1):         4.01e-07 
+*          Total Cap:      3.56633e-12 F
+*          Total instances in design:   348
+*          Total instances in design with no power:     0
+*          Total instances in design with no activity:     0
+*          Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+
