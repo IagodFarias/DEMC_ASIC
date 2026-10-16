@@ -12,7 +12,8 @@
 #
 #  Variaveis de ambiente opcionais:
 #     SIM=xrun|iverilog   simulador (padrao xrun; iverilog nao anota SDF)
-#     PDK=<caminho>       raiz do ihp-sg13g2
+#     PDK_ROOT=<caminho>  raiz do IHP-Open-PDK (pasta que contem ihp-sg13g2/);
+#                         so e necessario para o GLS (modelos das celulas)
 #     T_SETTLE=<ns>       espera por vetor (padrao 10; o pior atraso medido
 #                         no STA e 3.9 ns no slow, entao 5 ainda deve passar)
 #
@@ -27,7 +28,7 @@ set -u
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SIMDIR="$ROOT/sim"
 SIM="${SIM:-xrun}"
-PDK="${PDK:-/home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2}"
+PDK="${PDK_ROOT:+$PDK_ROOT/ihp-sg13g2}"
 T_SETTLE="${T_SETTLE:-10}"
 
 CELLS=("$PDK/libs.ref/sg13g2_stdcell/verilog/sg13g2_udp.v"
@@ -42,6 +43,7 @@ mkdir -p "$SIMDIR"
 cd "$SIMDIR" || exit 1
 
 need() { for f in "$@"; do [[ -f "$f" ]] || { echo "ERRO: falta $f"; exit 1; }; done; }
+need_pdk() { [[ -n "$PDK" ]] || { echo "ERRO: defina PDK_ROOT (raiz do IHP-Open-PDK) para o GLS"; exit 1; }; }
 
 # roda <nome> <defines...> -- <fontes...>
 roda() {
@@ -72,10 +74,10 @@ roda() {
 }
 
 run_rtl()  { need "${RTL[@]}" "$TB"; roda rtl -- "${RTL[@]}" "$TB"; }
-run_gls0() { need "${CELLS[@]}" "$NET" "$TB"; roda gls0 GATE -- "${CELLS[@]}" "$NET" "$TB"; }
+run_gls0() { need_pdk; need "${CELLS[@]}" "$NET" "$TB"; roda gls0 GATE -- "${CELLS[@]}" "$NET" "$TB"; }
 run_gls()  {
   local c="$1" sdf="$ROOT/pnr/out/ecc_design_$1.sdf"
-  need "${CELLS[@]}" "$NET" "$TB" "$sdf"
+  need_pdk; need "${CELLS[@]}" "$NET" "$TB" "$sdf"
   roda "gls_$c" GATE "SDF_FILE=\"$sdf\"" -- "${CELLS[@]}" "$NET" "$TB"
 }
 

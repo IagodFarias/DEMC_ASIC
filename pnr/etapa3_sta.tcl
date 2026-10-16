@@ -1,6 +1,10 @@
 # etapa3_sta.tcl - STA pos-layout nos 3 corners (slow/typ/fast)
 # Cada corner e analisado sozinho (set_analysis_view), porque o Innovus
 # poda as views "dominadas" quando todas estao ativas ao mesmo tempo.
+#
+# Restricoes: relogio virtual + atrasos/carga de E/S de
+# constraints/ecc_design.sdc (via ecc_design_synth.sdc). A "chegada" de um
+# caminho ja inclui o atraso de entrada; o slack e o numero que importa.
 set OUT reports_sta
 file mkdir $OUT
 
@@ -17,9 +21,9 @@ setDelayCalMode  -SIAware true
 
 set fd [open $OUT/resumo.txt w]
 puts $fd "ecc_design - STA pos-layout (SPEF da tech LEF, SI ligado, OCV)"
-puts $fd "Restricao: set_max_delay 5000 ns (entradas -> saidas)"
+puts $fd "Restricoes: constraints/ecc_design.sdc (relogio virtual vclk, E/S com driver e carga)"
 puts $fd ""
-puts $fd [format "%-8s %18s %18s %14s" "corner" "atraso max (ns)" "atraso min (ns)" "slack (ns)"]
+puts $fd [format "%-8s %20s %18s %18s" "corner" "chegada max (ns)" "slack setup (ns)" "slack hold (ns)"]
 
 foreach v {av_slow av_typ av_fast} {
   set_analysis_view -setup [list $v] -hold [list $v]
@@ -28,19 +32,17 @@ foreach v {av_slow av_typ av_fast} {
   report_timing -max_paths 10 -nworst 1 > $OUT/setup_$v.rpt
   catch {report_constraint -all_violators > $OUT/drv_$v.rpt}
 
-  set dmax "?" ; set dmin "?" ; set slk "?"
+  catch {report_timing -early -max_paths 10 -nworst 1 > $OUT/hold_$v.rpt}
+
+  set dmax "?" ; set slk "?" ; set hslk "?"
   if {![catch {set p [report_timing -max_paths 1 -collection]}]} {
     catch {set dmax [format %.3f [get_property $p arrival]]}
     catch {set slk  [format %.3f [get_property $p slack]]}
   }
-  if {![catch {report_timing -early -unconstrained -max_paths 5 \
-                  -from [all_inputs] -to [all_outputs] > $OUT/min_$v.rpt}]} {
-    if {![catch {set q [report_timing -early -unconstrained -max_paths 1 \
-                          -from [all_inputs] -to [all_outputs] -collection]}]} {
-      catch {set dmin [format %.3f [get_property $q arrival]]}
-    }
+  if {![catch {set q [report_timing -early -max_paths 1 -collection]}]} {
+    catch {set hslk [format %.3f [get_property $q slack]]}
   }
-  puts $fd [format "%-8s %18s %18s %14s" $v $dmax $dmin $slk]
+  puts $fd [format "%-8s %20s %18s %18s" $v $dmax $slk $hslk]
 }
 
 puts $fd ""
