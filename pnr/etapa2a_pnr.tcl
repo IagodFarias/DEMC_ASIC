@@ -5,8 +5,12 @@
 #  existente (parametros medidos no ecc_design_final.gds) e termina salvando
 #  o banco usado nas etapas seguintes.
 #
-#  Uso (dentro de pnr/):
+#  Uso (dentro de pnr/, com PDK_ROOT definido; veja scripts/pdk.tcl):
 #     innovus -no_gui -files etapa2a_pnr.tcl -log etapa2a
+#  ou, da raiz do repositorio:  make pnr
+#
+#  Entradas: ecc_design_synth.v/.sdc gerados por synth/synth.tcl. As
+#  restricoes de tempo/E/S vem de constraints/ecc_design.sdc (via Genus).
 #
 #  Saidas:
 #     ecc_design_route.enc(.dat)   banco roteado  -> entrada da etapa2_extracao.tcl
@@ -25,18 +29,16 @@
 #     - celulas tie (sg13g2_tiehi/tielo) no RESET_B dos latches, em vez de
 #       ligar a porta direto no VDD
 #     - celulas de preenchimento (fill) nos espacos vazios das linhas, que
-#       o original nao tinha e que o DRC de signoff (Etapa 6) exige
+#       o original nao tinha e que o DRC de signoff (signoff/run_drc.sh) exige
+#     - correcao de max_fanout ligada no optDesign (o layout anterior
+#       terminou com 4 redes acima do limite de 8)
 # =============================================================================
-set PDK      /home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2
-set STD      $PDK/libs.ref/sg13g2_stdcell
-set GDS_MAP  $PDK/libs.tech/klayout/tech/sg13g2.map
-set STD_GDS  $STD/gds/sg13g2_stdcell.gds
+source ../scripts/pdk.tcl   ;# PDK, STD, LEF_TECH, LEF_CELL, GDS_MAP, STD_GDS
 
 # --- 0. Confere os arquivos de entrada antes de comecar ----------------------
 set faltando {}
 foreach f [list mmmc_postlayout.tcl ecc_design_synth.v ecc_design_synth.sdc \
-                $STD/lef/sg13g2_tech.lef $STD/lef/sg13g2_stdcell.lef \
-                $GDS_MAP $STD_GDS] {
+                $LEF_TECH $LEF_CELL $GDS_MAP $STD_GDS] {
   if {![file exists $f]} { lappend faltando $f }
 }
 if {[llength $faltando]} {
@@ -54,7 +56,7 @@ set init_verilog           ecc_design_synth.v
 set init_top_cell          ecc_design
 set init_design_netlisttype Verilog
 set init_design_settop     1
-set init_lef_file          [list $STD/lef/sg13g2_tech.lef $STD/lef/sg13g2_stdcell.lef]
+set init_lef_file          [list $LEF_TECH $LEF_CELL]
 set init_mmmc_file         mmmc_postlayout.tcl   ;# corners slow/typ/fast
 set init_pwr_net           VDD
 set init_gnd_net           VSS
@@ -105,10 +107,13 @@ placeDesign
 setTieHiLoMode -cell {sg13g2_tiehi sg13g2_tielo} -maxFanout 8
 addTieHiLo     -cell {sg13g2_tiehi sg13g2_tielo}
 
+# DRVs: respeita max_fanout/max_transition do SDC (constraints/ecc_design.sdc)
+setOptMode -fixFanoutLoad true -fixDrc true
+
 optDesign -preCTS -outDir reports_pnr/timing_preCTS
 checkPlace reports_pnr/checkPlace.rpt
 
-# (sem CTS: o design e puramente combinacional)
+# (sem CTS: o design e puramente combinacional; o relogio do SDC e virtual)
 
 # --- 6. Roteamento -----------------------------------------------------------
 setDesignMode -topRoutingLayer Metal5

@@ -45,3 +45,12 @@ xcelium.d*/
 *.X
 sdf_annotate.log
 *.vcd
+
+# --- signoff (KLayout) ---
+signoff/runs/
+__pycache__/
+
+# --- logs do Innovus/Genus com o nome dado no Makefile ---
+pnr/etapa*.log*
+synth/genus.log*
+synth/genus.cmd*
