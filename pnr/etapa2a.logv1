@@ -1,0 +1,174 @@
+[09/29 22:09:06      0s] 
+[09/29 22:09:06      0s] Cadence Innovus(TM) Implementation System.
+[09/29 22:09:06      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[09/29 22:09:06      0s] 
+[09/29 22:09:06      0s] Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
+[09/29 22:09:06      0s] Options:	-no_gui -files etapa2a_pnr.tcl -log etapa2a 
+[09/29 22:09:06      0s] Date:		Tue Sep 29 22:09:06 2026
+[09/29 22:09:06      0s] Host:		semb (x86_64 w/Linux 4.18.0-553.137.1.el8_10.x86_64) (20cores*28cpus*Intel(R) Core(TM) i7-14700K 33792KB)
+[09/29 22:09:06      0s] OS:		Rocky Linux release 8.10 (Green Obsidian)
+[09/29 22:09:06      0s] 
+[09/29 22:09:06      0s] License:
+[09/29 22:09:06      0s] 		[22:09:06.201625] Configured Lic search path (21.01-s002): 5280@192.168.0.10
+
+[09/29 22:09:06      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[09/29 22:09:06      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[09/29 22:09:14      6s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+[09/29 22:09:16      7s] @(#)CDS: NanoRoute 21.15-s110_1 NR220912-2004/21_15-UB (database version 18.20.592) {superthreading v2.17}
+[09/29 22:09:16      7s] @(#)CDS: AAE 21.15-s039 (64bit) 09/23/2022 (Linux 3.10.0-693.el7.x86_64)
+[09/29 22:09:16      7s] @(#)CDS: CTE 21.15-s038_1 () Sep 20 2022 11:42:13 ( )
+[09/29 22:09:16      7s] @(#)CDS: SYNTECH 21.15-s012_1 () Sep  5 2022 10:25:51 ( )
+[09/29 22:09:16      7s] @(#)CDS: CPE v21.15-s076
+[09/29 22:09:16      7s] @(#)CDS: IQuantus/TQuantus 21.1.1-s867 (64bit) Sun Jun 26 22:12:54 PDT 2022 (Linux 3.10.0-693.el7.x86_64)
+[09/29 22:09:16      7s] @(#)CDS: OA 22.60-p076 Wed May 18 13:45:29 2022
+[09/29 22:09:16      7s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[09/29 22:09:16      7s] @(#)CDS: RCDB 11.15.0
+[09/29 22:09:16      7s] @(#)CDS: STYLUS 21.12-s013_1 (08/15/2022 08:25 PDT)
+[09/29 22:09:16      7s] @(#)CDS: SystemPlanner-21.15Rel-8720 (21.15) (2022-08-22 18:31:54+0800)
+[09/29 22:09:16      7s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_3221336_semb_mateusmaia45_kPezl0.
+
+[09/29 22:09:16      7s] Change the soft stacksize limit to 0.2%RAM (95 mbytes). Set global soft_stack_size_limit to change the value.
+[09/29 22:09:17      7s] 
+[09/29 22:09:17      7s] **INFO:  MMMC transition support version v31-84 
+[09/29 22:09:17      7s] 
+[09/29 22:09:17      7s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[09/29 22:09:17      7s] <CMD> suppressMessage ENCEXT-2799
+[09/29 22:09:17      7s] <CMD> getVersion
+[09/29 22:09:18      7s] [INFO] Loading PVS 23.11 fill procedures
+[09/29 22:09:18      7s] **WARN: Tk package not loaded. The PVS fill DRC monitor is disabled.
+[09/29 22:09:18      8s] Sourcing file "etapa2a_pnr.tcl" ...
+[09/29 22:09:18      8s] <CMD> setMultiCpuUsage -localCpu 4
+[09/29 22:09:18      8s] <CMD> set init_verilog ecc_design_synth.v
+[09/29 22:09:18      8s] <CMD> set init_top_cell ecc_design
+[09/29 22:09:18      8s] <CMD> set init_design_netlisttype Verilog
+[09/29 22:09:18      8s] <CMD> set init_design_settop 1
+[09/29 22:09:18      8s] <CMD> set init_lef_file {/home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef /home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef}
+[09/29 22:09:18      8s] <CMD> set init_mmmc_file mmmc_postlayout.tcl
+[09/29 22:09:18      8s] <CMD> set init_pwr_net VDD
+[09/29 22:09:18      8s] <CMD> set init_gnd_net VSS
+[09/29 22:09:18      8s] <CMD> init_design
+[09/29 22:09:18      8s] **ERROR: (IMPSYT-6284):	Failed to open file mmmc_postlayout.tcl for read.
+[09/29 22:09:18      8s] 
+[09/29 22:09:18      8s] Loading LEF file /home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef ...
+[09/29 22:09:18      8s] 
+[09/29 22:09:18      8s] Loading LEF file /home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef ...
+[09/29 22:09:18      8s] Set DBUPerIGU to M2 pitch 480.
+[09/29 22:09:18      8s] **WARN: (IMPLF-200):	Pin 'A' in macro 'sg13g2_antennanp' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/29 22:09:18      8s] Type 'man IMPLF-200' for more detail.
+[09/29 22:09:18      8s] 
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[09/29 22:09:18      8s] Loading view definition file from mmmc_postlayout.tcl
+[09/29 22:09:18      8s] *** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.13min, fe_real=0.20min, fe_mem=949.0M) ***
+[09/29 22:09:18      8s] #% Begin Load netlist data ... (date=09/29 22:09:18, mem=898.3M)
+[09/29 22:09:18      8s] *** Begin netlist parsing (mem=949.0M) ***
+[09/29 22:09:18      8s] Created 0 new cells from 0 timing libraries.
+[09/29 22:09:18      8s] Reading netlist ...
+[09/29 22:09:18      8s] Backslashed names will retain backslash and a trailing blank character.
+[09/29 22:09:18      8s] Reading verilog netlist 'ecc_design_synth.v'
+[09/29 22:09:18      8s] 
+[09/29 22:09:18      8s] *** Memory Usage v#1 (Current mem = 951.957M, initial mem = 483.887M) ***
+[09/29 22:09:18      8s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=952.0M) ***
+[09/29 22:09:18      8s] #% End Load netlist data ... (date=09/29 22:09:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=903.0M, current mem=903.0M)
+[09/29 22:09:18      8s] Set top cell to ecc_design.
+[09/29 22:09:18      8s] Hooked 0 DB cells to tlib cells.
+[09/29 22:09:18      8s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=903.6M, current mem=903.6M)
+[09/29 22:09:18      8s] Starting recursive module instantiation check.
+[09/29 22:09:18      8s] No recursion found.
+[09/29 22:09:18      8s] Building hierarchical netlist for Cell ecc_design ...
+[09/29 22:09:18      8s] *** Netlist is unique.
+[09/29 22:09:18      8s] Setting Std. cell height to 3780 DBU (smallest netlist inst).
+[09/29 22:09:18      8s] ** info: there are 85 modules.
+[09/29 22:09:18      8s] ** info: there are 368 stdCell insts.
+[09/29 22:09:18      8s] 
+[09/29 22:09:18      8s] *** Memory Usage v#1 (Current mem = 1013.371M, initial mem = 483.887M) ***
+[09/29 22:09:18      8s] Adjust TopMetal1 preferred direction offset from 1.64 to 0.
+[09/29 22:09:18      8s] Start create_tracks
+[09/29 22:09:18      8s] Generated pitch 3.36 in TopMetal2 is different from 4 defined in technology file in unpreferred direction.
+[09/29 22:09:18      8s] Generated pitch 0.42 in TopMetal1 is different from 3.28 defined in technology file in unpreferred direction.
+[09/29 22:09:18      8s] Generated pitch 3.36 in TopMetal1 is different from 3.28 defined in technology file in preferred direction.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_xor2_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_xnor2_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_or3_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_o21ai_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_nor4_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_nor3_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_nor2b_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_nor2_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_nand3b_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_nand3_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_nand2b_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_nand2_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_inv_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_dllrq_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_dlhrq_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_buf_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_and3_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_and2_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_a22oi_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (IMPSYC-2):	Timing information is not defined for cell sg13g2_a221oi_1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[09/29 22:09:18      8s] Type 'man IMPSYC-2' for more detail.
+[09/29 22:09:18      8s] **WARN: (EMS-27):	Message (IMPSYC-2) has exceeded the current message display limit of 20.
+[09/29 22:09:18      8s] To increase the message display limit, refer to the product command reference manual.
+[09/29 22:09:18      8s] **ERROR: (IMPSYT-7327):	Active setup and hold analysis views were not provided in either file mmmc_postlayout.tcl or by the -setup and -hold arguments to initDesign. The system requires at least one active setup and hold analysis view to be declared before the design can be initialized. You must add a set_analysis_view command to your script, or add the -setup and -hold options to your init_design invocation. You can use the all_analysis_view command to identify the currently available views. If you are using CPF in a physical-only flow, please use 'read_power_intent -cpf' and 'commit_power_intent' after init_design. Do not specify the CPF with the init_cpf_file variable in a physical-only flow.
+[09/29 22:09:18      8s] **ERROR: (IMPSYT-6692):	Invalid return code while executing 'etapa2a_pnr.tcl' was returned and script processing was stopped. Review the following error in 'etapa2a_pnr.tcl' then restart.
+[09/29 22:09:18      8s] Error info: etapa2a_pnr.tcl: 
+[09/29 22:09:18      8s]     while executing
+[09/29 22:09:18      8s] "error [putError $::uiEmsHandleId 7327 $::init_mmmc_file]"
+[09/29 22:09:18      8s]     (procedure "init_design" line 419)
+[09/29 22:09:18      8s]     invoked from within
+[09/29 22:09:18      8s] "init_design"
+[09/29 22:09:18      8s]     (file "etapa2a_pnr.tcl" line 48)
+[09/29 22:09:18      8s]     invoked from within
+[09/29 22:09:18      8s] "::se_source_orig etapa2a_pnr.tcl"
+[09/29 22:09:18      8s]     ("uplevel" body line 1)
+[09/29 22:09:18      8s]     invoked from within
+[09/29 22:09:18      8s] "uplevel [concat ::se_source_orig $args]"
+[09/29 22:09:18      8s]     (procedure "source" line 188)
+[09/29 22:09:18      8s]     invoked from within
+[09/29 22:09:18      8s] "source etapa2a_pnr.tcl"
+[09/29 22:09:18      8s]     ("uplevel" body line 1)
+[09/29 22:09:18      8s]     invoked from within
+[09/29 22:09:18      8s] "uplevel #0 source etapa2a_pnr.tcl"
+[09/29 22:09:18      8s]     ("eval" body line 1)
+[09/29 22:09:18      8s]     invoked from within
+[09/29 22:09:18      8s] "eval {uplevel #0 source etapa2a_pnr.tcl}"
+[09/29 22:09:18      8s]     (in namespace inscope "::" script line 1)
+[09/29 22:09:18      8s]     invoked from within
+[09/29 22:09:18      8s] "namespace inscope :: eval "uplevel #0 source $fileName"".
+[09/29 22:12:21      8s] couldn't change working directory to "pnr": no such file or directory
+[09/29 22:12:21      8s] wrong # args: should be "innovus"
+[09/29 22:12:28      8s] wrong # args: should be "innovus"
+[09/29 22:12:37      8s] 
+[09/29 22:12:37      8s] *** Memory Usage v#1 (Current mem = 1246.520M, initial mem = 483.887M) ***
+[09/29 22:12:37      8s] 
+[09/29 22:12:37      8s] *** Summary of all messages that are not suppressed in this session:
+[09/29 22:12:37      8s] Severity  ID               Count  Summary                                  
+[09/29 22:12:37      8s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[09/29 22:12:37      8s] ERROR     IMPSYT-6284          1  Failed to open file %s for read.         
+[09/29 22:12:37      8s] ERROR     IMPSYT-7327          1  Active setup and hold analysis views wer...
+[09/29 22:12:37      8s] ERROR     IMPSYT-6692          1  Invalid return code while executing '%s'...
+[09/29 22:12:37      8s] WARNING   IMPSYC-2            22  Timing information is not defined for ce...
+[09/29 22:12:37      8s] *** Message Summary: 23 warning(s), 3 error(s)
+[09/29 22:12:37      8s] 
+[09/29 22:12:37      8s] --- Ending "Innovus" (totcpu=0:00:08.2, real=0:03:31, mem=1246.5M) ---

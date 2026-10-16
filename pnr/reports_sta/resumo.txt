@@ -1,0 +1,9 @@
+ecc_design - STA pos-layout (SPEF da tech LEF, SI ligado, OCV)
+Restricao: set_max_delay 5000 ns (entradas -> saidas)
+
+corner      atraso max (ns)    atraso min (ns)     slack (ns)
+av_slow               3.876              0.085       4996.124
+av_typ                2.478              0.057       4997.522
+av_fast               1.631              0.041       4998.369
+
+Violacoes de DRV por corner: drv_av_slow.rpt, drv_av_typ.rpt, drv_av_fast.rpt

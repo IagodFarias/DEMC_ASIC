@@ -36,3 +36,15 @@
 [09/29 08:58:44      8s] <CMD> getVersion
 [09/29 08:58:44      8s] [INFO] Loading PVS 23.11 fill procedures
 [09/29 08:58:45      8s] <CMD> win
+[09/29 09:47:00     89s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Tue Sep 29 09:47:00 2026
+  Total CPU time:     0:01:29
+  Total real time:    0:48:34
+  Peak memory (main): 1031.39MB
+
+[09/29 09:47:00     89s] 
+[09/29 09:47:00     89s] *** Memory Usage v#1 (Current mem = 1247.680M, initial mem = 483.887M) ***
+[09/29 09:47:00     89s] *** Message Summary: 0 warning(s), 0 error(s)
+[09/29 09:47:00     89s] 
+[09/29 09:47:00     89s] --- Ending "Innovus" (totcpu=0:01:29, real=0:48:28, mem=1247.7M) ---
