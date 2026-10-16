@@ -25,3 +25,23 @@ pnr/pvsUI_ipvs.log
 
 sim/*
 !sim/.gitkeep
+
+# --- limpeza 2026-10 ---
+innovus.log*
+innovus.cmd*
+**/innovus.log*
+**/innovus.cmd*
+pnr/etapa*.log*
+pnr/etapa*.cmd*
+synth/genus.log*
+synth/genus.cmd*
+synth/.rs_*.tstamp
+pvsUI_ipvs.log
+**/pvsUI_ipvs.log
+*~
+*.old
+*.bak
+xcelium.d*/
+*.X
+sdf_annotate.log
+*.vcd
