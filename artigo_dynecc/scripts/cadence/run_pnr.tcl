@@ -44,6 +44,7 @@ setPlaceMode -place_global_place_io_pins false
 placeDesign
 setTieHiLoMode -cell {sg13g2_tiehi sg13g2_tielo} -maxFanout 8
 addTieHiLo -cell {sg13g2_tiehi sg13g2_tielo}
+setOptMode -fixFanoutLoad true -fixDrc true
 optDesign -preCTS
 # combinational block: no clock tree synthesis.
 setDesignMode -topRoutingLayer Metal5
