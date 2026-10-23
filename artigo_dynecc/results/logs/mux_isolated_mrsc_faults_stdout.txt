@@ -1,0 +1,35 @@
+TOOL:	xrun(64)	24.09-s001: Started on Oct 22, 2026 at 22:57:50 -03
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/tb/tb_faults.sv
+	module worklib.tb_faults:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_faults
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb_faults:sv <0x7031235b>
+			streams:  18, words: 13177
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 6       6
+		Registers:              83      83
+		Scalar wires:            4       -
+		Vectored wires:         37       -
+		Always blocks:           5       5
+		Initial blocks:          7       7
+		Cont. assignments:      10      12
+		Pseudo assignments:     15       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_faults:sv
+Loading snapshot worklib.tb_faults:sv .................... Done
+xcelium> source /home/tools/cadence/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+FAULTS sel=011 no-error=8/8 single=256/256 double=2240/3968
+Simulation complete via $finish(1) at time 21200 NS + 0
+./tb/tb_faults.sv:45     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 22, 2026 at 22:57:50 -03  (total: 00:00:00)

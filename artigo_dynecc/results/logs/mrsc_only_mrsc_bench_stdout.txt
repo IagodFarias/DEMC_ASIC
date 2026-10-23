@@ -1,0 +1,59 @@
+TOOL:	xrun(64)	24.09-s001: Started on Oct 22, 2026 at 22:57:47 -03
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/common/MRSC_decoder.sv
+	module worklib.MRSC_decoder:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/common/MRSC_encoder.sv
+	module worklib.MRSC_encoder:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/common/TBEC_RSC_decoder.sv
+	module worklib.TBEC_RSC_decoder:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/common/TBEC_RSC_encoder.sv
+	module worklib.TBEC_RSC_encoder:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/top/ecc_mrsc_only.sv
+	module worklib.ecc_mrsc_only:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/tb/tb_ecc_bench.sv
+	module worklib.tb_ecc_bench:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_ecc_bench
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.MRSC_decoder:sv <0x5bb5f696>
+			streams:   2, words: 14023
+		worklib.MRSC_encoder:sv <0x2bc28c5d>
+			streams:   2, words:  5550
+		worklib.ecc_mrsc_only:sv <0x5ae49152>
+			streams:   5, words:  4421
+		worklib.tb_ecc_bench:sv <0x662f14db>
+			streams:  13, words: 22567
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       4
+		Registers:              58      58
+		Scalar wires:            4       -
+		Vectored wires:         16       -
+		Always blocks:           3       3
+		Initial blocks:          4       4
+		Cont. assignments:       3       5
+		Pseudo assignments:      8       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_ecc_bench:sv
+Loading snapshot worklib.tb_ecc_bench:sv .................... Done
+xcelium> source /home/tools/cadence/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+VCD_START 335.0 ns
+VCD_END 7835.0 ns
+RESULT scenario=mrsc reads=1125 writes=375 errors=0
+PASS: all decoded data match written words
+Simulation complete via $finish(1) at time 7835 NS + 0
+./tb/tb_ecc_bench.sv:112     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 22, 2026 at 22:57:47 -03  (total: 00:00:00)

@@ -1,0 +1,87 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Oct-22 23:29:52 (2026-Oct-23 02:29:52 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: ecc_mux_isolated
+*
+*	Liberty Libraries used: 
+*	        av_typ: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/results/cadence/ecc_mux_isolated/routed.enc.dat/libs/mmmc/sg13g2_stdcell_typ_1p20V_25C.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:        1.2 
+*
+*       Power View : av_typ
+*
+*       User-Defined Activity : N.A.
+*
+*	Switching Activity File used: 
+*	        /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/results/vcd/mux_isolated_tbec_gls.vcd
+*                    Vcd Window used(Start Time, Stop Time):  (335.000000,7835.000000) 
+*                     Vcd Scale Factor: 1 
+* *                    Design annotation coverage: 0/620 = 0% 
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: N.A.
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/results/cadence/ecc_mux_isolated/power_tbec.rpt
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.20965626 	   36.6257%
+Total Switching Power:       0.36269607 	   63.3609%
+Total Leakage Power:         0.00007626 	    0.0133%
+Total Power:                 0.57242858 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                             0           0           0           0           0 
+Macro                                  0           0           0           0           0 
+IO                                     0           0           0           0           0 
+Combinational                     0.2097      0.3627   7.626e-05      0.5724         100 
+Clock (Combinational)                  0           0           0           0           0 
+Clock (Sequential)                     0           0           0           0           0 
+-----------------------------------------------------------------------------------------
+Total                             0.2097      0.3627   7.626e-05      0.5724         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                       1.2     0.2097      0.3627   7.626e-05      0.5724         100 
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power:              g14505__1617 (sg13g2_or2_1):         0.006948 
+*                Highest Leakage Power:              g14503__2346 (sg13g2_nand4_1):        3.245e-07 
+*          Total Cap:      6.76185e-12 F
+*          Total instances in design:   568
+*          Total instances in design with no power:     0
+*          Total instances in design with no activity:     0
+*          Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+

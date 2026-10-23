@@ -1,0 +1,13 @@
+TOOL:	xrun(64)	24.09-s001: Started on Oct 22, 2026 at 23:30:02 -03
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+Loading snapshot worklib.tb_ecc_bench:sv .................... Done
+xcelium> source /home/tools/cadence/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+VCD_START 335.0 ns
+VCD_END 7835.0 ns
+RESULT scenario=mixed reads=1125 writes=375 errors=0
+PASS: all decoded data match written words
+Simulation complete via $finish(1) at time 7835 NS + 0
+./tb/tb_ecc_bench.sv:112     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 22, 2026 at 23:30:03 -03  (total: 00:00:01)

@@ -1,0 +1,102 @@
+[10/22 22:58:46      0s] 
+[10/22 22:58:46      0s] Cadence Innovus(TM) Implementation System.
+[10/22 22:58:46      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[10/22 22:58:46      0s] 
+[10/22 22:58:46      0s] Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
+[10/22 22:58:46      0s] Options:	-no_gui -files results/logs/help.tcl -log results/logs/help 
+[10/22 22:58:46      0s] Date:		Thu Oct 22 22:58:46 2026
+[10/22 22:58:46      0s] Host:		semb (x86_64 w/Linux 4.18.0-553.137.1.el8_10.x86_64) (20cores*28cpus*Intel(R) Core(TM) i7-14700K 33792KB)
+[10/22 22:58:46      0s] OS:		Rocky Linux release 8.10 (Green Obsidian)
+[10/22 22:58:46      0s] 
+[10/22 22:58:46      0s] License:
+[10/22 22:58:46      0s] 		[22:58:46.201689] Configured Lic search path (21.01-s002): 5280@192.168.0.10
+
+[10/22 22:58:46      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[10/22 22:58:46      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[10/22 22:58:53      5s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+[10/22 22:58:54      7s] @(#)CDS: NanoRoute 21.15-s110_1 NR220912-2004/21_15-UB (database version 18.20.592) {superthreading v2.17}
+[10/22 22:58:54      7s] @(#)CDS: AAE 21.15-s039 (64bit) 09/23/2022 (Linux 3.10.0-693.el7.x86_64)
+[10/22 22:58:54      7s] @(#)CDS: CTE 21.15-s038_1 () Sep 20 2022 11:42:13 ( )
+[10/22 22:58:54      7s] @(#)CDS: SYNTECH 21.15-s012_1 () Sep  5 2022 10:25:51 ( )
+[10/22 22:58:54      7s] @(#)CDS: CPE v21.15-s076
+[10/22 22:58:54      7s] @(#)CDS: IQuantus/TQuantus 21.1.1-s867 (64bit) Sun Jun 26 22:12:54 PDT 2022 (Linux 3.10.0-693.el7.x86_64)
+[10/22 22:58:54      7s] @(#)CDS: OA 22.60-p076 Wed May 18 13:45:29 2022
+[10/22 22:58:54      7s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[10/22 22:58:54      7s] @(#)CDS: RCDB 11.15.0
+[10/22 22:58:54      7s] @(#)CDS: STYLUS 21.12-s013_1 (08/15/2022 08:25 PDT)
+[10/22 22:58:54      7s] @(#)CDS: SystemPlanner-21.15Rel-8720 (21.15) (2022-08-22 18:31:54+0800)
+[10/22 22:58:54      7s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_3514362_semb_mateusmaia45_nPcyGZ.
+
+[10/22 22:58:54      7s] Change the soft stacksize limit to 0.2%RAM (95 mbytes). Set global soft_stack_size_limit to change the value.
+[10/22 22:58:55      7s] 
+[10/22 22:58:55      7s] **INFO:  MMMC transition support version v31-84 
+[10/22 22:58:55      7s] 
+[10/22 22:58:55      7s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[10/22 22:58:55      7s] <CMD> suppressMessage ENCEXT-2799
+[10/22 22:58:55      7s] <CMD> getVersion
+[10/22 22:58:55      7s] [INFO] Loading PVS 23.11 fill procedures
+[10/22 22:58:55      7s] **WARN: Tk package not loaded. The PVS fill DRC monitor is disabled.
+[10/22 22:58:55      7s] Sourcing file "results/logs/help.tcl" ...
+[10/22 22:58:55      7s] <CMD> read_activity_file -help
+[10/22 22:58:55      7s] 
+[10/22 22:58:55      7s] Usage: read_activity_file [-help] [<name>] [-block <string>] [-cell <string>]
+[10/22 22:58:55      7s]                           [-end <string>] [-format <string>] [-hier_separator <string>]
+[10/22 22:58:55      7s]                           [-name_mapping_rule <string>] [-reset] [-rtl <string>]
+[10/22 22:58:55      7s]                           [-scale_duration <string>] [-scope <string>]
+[10/22 22:58:55      7s]                           [-set_net_freq {true false}] [-start <string>]
+[10/22 22:58:55      7s]                           [-start_time_shift <string>] [-weight <string>]
+[10/22 22:58:55      7s]                           [-zero_delay <string>]
+[10/22 22:58:55      7s] 
+[10/22 22:58:55      7s] -help                             # Prints out the command usage
+[10/22 22:58:55      7s] <name>                            # Specify the name of the activity file.
+[10/22 22:58:55      7s]                                   # (string, optional)
+[10/22 22:58:55      7s] -block <string>                   # Specifies the name of the VCD/FSDB/TCF/SHM/PHY block to
+[10/22 22:58:55      7s]                                   # map a sub-block activity file with a top level
+[10/22 22:58:55      7s]                                   # Verilog/Def file. (string, optional)
+[10/22 22:58:55      7s] -cell <string>                    # master call name (string, optional)
+[10/22 22:58:55      7s] -end <string>                     # Specifies the end time as time-value pairs to report the
+[10/22 22:58:55      7s]                                   # average power across non-overlapping multiple windows
+[10/22 22:58:55      7s]                                   # specified in the VCD/FSDB/SHM/PHY file for a block,
+[10/22 22:58:55      7s]                                   # level of hierarchy, or other part of the design.
+[10/22 22:58:55      7s]                                   # (string, optional)
+[10/22 22:58:55      7s] -format <string>                  # Specifies the net activity of the design using an
+[10/22 22:58:55      7s]                                   # activity file in VCD, TCF, FSDB, PHY or SAIF format.
+[10/22 22:58:55      7s]                                   # (string, optional)
+[10/22 22:58:55      7s] -hier_separator <string>          # Specifies the separator character in the hierarchical
+[10/22 22:58:55      7s]                                   # net names, bus names, and pin names for the block or
+[10/22 22:58:55      7s]                                   # other part of the design. (string, optional)
+[10/22 22:58:55      7s] -name_mapping_rule <string>       # Specifies the input rule-based mapping to map RTL
+[10/22 22:58:55      7s]                                   # vectors to gate-level netlist. These rules will apply to
+[10/22 22:58:55      7s]                                   # all the RTL activity files specified. (string, optional)
+[10/22 22:58:55      7s] -reset                            # Specifies to reset and ignore all the previous activity
+[10/22 22:58:55      7s]                                   # files. (bool, optional)
+[10/22 22:58:55      7s] -rtl <string>                     # This option should be set when RTL vector is specified.
+[10/22 22:58:55      7s]                                   # (string, optional)
+[10/22 22:58:55      7s] -scale_duration <string>          # Scales the VCD/FSDB/TCF/SHM/PHY duration value by the
+[10/22 22:58:55      7s]                                   # specified scale factor. (string, optional)
+[10/22 22:58:55      7s] -scope <string>                   # Specifies the VCD/FSDB/TCF/SHM/PHY scope, that is, the
+[10/22 22:58:55      7s]                                   # name of the module within the activity file associated
+[10/22 22:58:55      7s]                                   # with the block or other part of the design.
+[10/22 22:58:55      7s]                                   # (string, optional)
+[10/22 22:58:55      7s] -set_net_freq {true false}        # This option should be set when an activity from a
+[10/22 22:58:55      7s]                                   # VCD/FSDB/TCF/SHM/PHY file needs to be used to capture
+[10/22 22:58:55      7s]                                   # net frequency for signal EM analysis.  Default : false
+[10/22 22:58:55      7s]                                   # (enum, optional)
+[10/22 22:58:55      7s] -start <string>                   # Specifies the start time as time-value pairs to report
+[10/22 22:58:55      7s]                                   # the average power across non-overlapping multiple
+[10/22 22:58:55      7s]                                   # windows specified in the VCD/FSDB/SHM/PHY file for a
+[10/22 22:58:55      7s]                                   # block, level of hierarchy, or other part of the design.
+[10/22 22:58:55      7s]                                   # (string, optional)
+[10/22 22:58:55      7s] -start_time_shift <string>        # Specifies to shift the start time of the specified
+[10/22 22:58:55      7s]                                   # activity files. (string, optional)
+[10/22 22:58:55      7s] -weight <string>                  # Specifies the weight number of the TCF file. Default :
+[10/22 22:58:55      7s]                                   # 1.0 (string, optional)
+[10/22 22:58:55      7s] -zero_delay <string>              # This option should be set when Zero Delay Vector File is
+[10/22 22:58:55      7s]                                   # specified. (string, optional)
+[10/22 22:58:55      7s] 
+[10/22 22:58:55      7s] 
+[10/22 22:58:55      7s] 
+[10/22 22:58:55      7s] *** Memory Usage v#1 (Current mem = 952.676M, initial mem = 483.887M) ***
+[10/22 22:58:55      7s] *** Message Summary: 0 warning(s), 0 error(s)
+[10/22 22:58:55      7s] 
+[10/22 22:58:55      7s] --- Ending "Innovus" (totcpu=0:00:07.8, real=0:00:09.0, mem=952.7M) ---

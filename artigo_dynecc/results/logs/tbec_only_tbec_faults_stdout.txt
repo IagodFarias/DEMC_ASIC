@@ -1,0 +1,56 @@
+TOOL:	xrun(64)	24.09-s001: Started on Oct 22, 2026 at 22:57:49 -03
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/common/MRSC_decoder.sv
+	module worklib.MRSC_decoder:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/common/MRSC_encoder.sv
+	module worklib.MRSC_encoder:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/common/TBEC_RSC_decoder.sv
+	module worklib.TBEC_RSC_decoder:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/common/TBEC_RSC_encoder.sv
+	module worklib.TBEC_RSC_encoder:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/rtl/top/ecc_tbec_only.sv
+	module worklib.ecc_tbec_only:sv
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/tb/tb_faults.sv
+	module worklib.tb_faults:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_faults
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.TBEC_RSC_decoder:sv <0x48431442>
+			streams:   3, words: 16026
+		worklib.TBEC_RSC_encoder:sv <0x0c73d954>
+			streams:   2, words:  4784
+		worklib.ecc_tbec_only:sv <0x59e199dc>
+			streams:   6, words:  4994
+		worklib.tb_faults:sv <0x7031235b>
+			streams:  18, words: 13177
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       4
+		Registers:              59      59
+		Scalar wires:            4       -
+		Vectored wires:         24       -
+		Always blocks:           3       3
+		Initial blocks:          7       7
+		Cont. assignments:       4       6
+		Pseudo assignments:     14       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_faults:sv
+Loading snapshot worklib.tb_faults:sv .................... Done
+xcelium> source /home/tools/cadence/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+FAULTS sel=010 no-error=8/8 single=256/256 double=2240/3968
+Simulation complete via $finish(1) at time 21200 NS + 0
+./tb/tb_faults.sv:45     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 22, 2026 at 22:57:49 -03  (total: 00:00:00)

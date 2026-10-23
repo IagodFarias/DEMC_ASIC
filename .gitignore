@@ -2,6 +2,7 @@
 # Sintese
 # ==========================================
 
+<<<<<<< Updated upstream
 # Ignora arquivos temporarios
 synth/*.log
 synth/*.cmd
@@ -45,3 +46,49 @@ xcelium.d*/
 *.X
 sdf_annotate.log
 *.vcd
+=======
+# Logs e historico das ferramentas
+*.log
+*.log.*
+*.cmd
+*.key
+*.jou
+*.history
+.simvision/
+.cadence/
+
+# Simulacao (Xcelium)
+INCA_libs/
+xcelium.d/
+waves.shm/
+*.vcd
+*.shm
+sim/worklib/
+sim/tb_lib/
+
+# Saidas de sintese e PnR - scripts em synth/ e pnr/ SAO versionados
+synth/outputs/
+synth/reports/
+synth/fv/
+synth/genus_invs_des/
+pnr/outputs/
+pnr/reports/
+pnr/work/
+*.enc
+*.enc.dat/
+*.gds
+*.gds.gz
+*.def
+*.spef
+*.sdf
+
+# Arquivos com caminhos absolutos da maquina local
+cds.lib
+setup/cds.lib
+setup/qrc/
+
+# Editores / SO
+*.swp
+*~
+.DS_Store
+>>>>>>> Stashed changes
