@@ -19,8 +19,7 @@ read_hdl -sv [glob "$root/rtl/common/*.sv"]
 read_hdl -sv "$root/rtl/top/$top.sv"
 elaborate $top
 # Use documented reference timing target; do not confuse it with measured delay.
-set_units -time ns
-set_max_delay 5.0 -from [all_inputs] -to [all_outputs]
+read_sdc "$root/constraints/dynecc.sdc"
 syn_generic
 syn_map
 syn_opt

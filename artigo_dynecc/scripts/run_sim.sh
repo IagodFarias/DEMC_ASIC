@@ -25,8 +25,8 @@ DEFINES=("DUT_MODULE=${DUT}")
 SIM="${SIM:-xrun}"
 if [[ "$SIM" == xrun ]]; then
   command -v xrun >/dev/null || { echo "xrun not found; set SIM=iverilog or use student's Cadence installation" >&2; exit 3; }
-  args=(-64bit -sv -timescale 1ns/1ps -top "tb_ecc_$TEST")
-  [[ "$TEST" == faults ]] && args=(-64bit -sv -timescale 1ns/1ps -top tb_faults)
+  args=(-64bit -sv -access +r -timescale 1ns/1ps -top "tb_ecc_$TEST")
+  [[ "$TEST" == faults ]] && args=(-64bit -sv -access +r -timescale 1ns/1ps -top tb_faults)
   for def in "${DEFINES[@]}";do args+=("+define+$def");done
   xrun "${args[@]}" "${SRC[@]}" "$TB" "+SCENARIO=$SCENARIO" "+VCD=$VCD" -l "$LOG" | tee "${LOG%.log}_stdout.txt"
 elif [[ "$SIM" == iverilog ]];then

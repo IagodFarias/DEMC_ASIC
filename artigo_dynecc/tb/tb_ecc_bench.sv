@@ -88,7 +88,7 @@ module tb_ecc_bench;
     if(data_out_right_down!==16'hACDC || data_out_left!==16'h0AA0) errors++;
     for(int i=0;i<NWORDS;i++) begin
       nextrand(r);nextrand(s);
-      store(i,choose_mode(i,s),r[0:15]);
+      store(i,choose_mode(i,s),r[31:16]);
     end
     n_reads=0;n_writes=0;
     // Re-seed so all tests start a reproducible traffic sequence.
@@ -100,9 +100,9 @@ module tb_ecc_bench;
       if ((i%4)==0) begin
         // mixed mode may change an address's encoding on a complete overwrite.
         // This is safe; changing only the read-mode without rewriting is NOT safe.
-        store(addr,choose_mode(addr,s),s[0:15]);
+        store(addr,choose_mode(addr,s),s[31:16]);
       end else begin
-        load(addr,s[0:15]);
+        load(addr,s[31:16]);
       end
     end
     $display("VCD_END %0.1f ns", $realtime); $dumpoff;
