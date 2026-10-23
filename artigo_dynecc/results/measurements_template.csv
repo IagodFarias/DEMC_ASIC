@@ -1,9 +1,9 @@
-variant,scenario,area_logic_um2,area_die_um2,delay_typ_ns,power_uW,leakage_uW,vcd_annotation_pct,source_report,notes
-mrsc_only,mrsc,,,,,,,,
-tbec_only,tbec,,,,,,,,
-mux_reference,tbec,,,,,,,,
-mux_reference,mrsc,,,,,,,,
-mux_reference,mixed,,,,,,,,
-mux_isolated,tbec,,,,,,,,
-mux_isolated,mrsc,,,,,,,,
-mux_isolated,mixed,,,,,,,,
+variant,scenario,area_logic_um2,area_die_um2,delay_typ_ns,power_uW,leakage_uW,vcd_annotation_pct,source_report,notes,internal_uW,switching_uW,area_core_um2,nets_active_pct,energy_pJ_per_op,gls_pass,sdf_warnings
+mrsc_only,mrsc,2855.866,7916.832,2.363,,,100.0,"cadence/ecc_mrsc_only/{summary,timing_pnr}.rpt; power_mrsc.rpt",potencia descartada: handle_glitch true,,,4735.584,,,PASS,0
+tbec_only,tbec,2930.256,8170.848,2.328,277.629,0.0382,100.0,"cadence/ecc_tbec_only/{summary,timing_pnr}.rpt; power_tbec.rpt","Innovus static, VCD GLS+SDF 335-7835 ns, handle_glitch false",116.330,161.262,4931.539,80.6,1.3881,PASS,0
+mux_reference,tbec,3904.589,10224.749,2.637,303.353,0.0512,100.0,"cadence/ecc_mux_reference/{summary,timing_pnr}.rpt; power_tbec.rpt","Innovus static, VCD GLS+SDF 335-7835 ns, handle_glitch false",124.642,178.660,6553.613,75.3,1.5168,PASS,0
+mux_reference,mrsc,3904.589,10224.749,2.637,346.808,0.0512,100.0,"cadence/ecc_mux_reference/{summary,timing_pnr}.rpt; power_mrsc.rpt","Innovus static, VCD GLS+SDF 335-7835 ns, handle_glitch false",141.094,205.662,6553.613,81.6,1.7340,PASS,
+mux_reference,mixed,3904.589,10224.749,2.637,345.679,0.0511,100.0,"cadence/ecc_mux_reference/{summary,timing_pnr}.rpt; power_mixed.rpt","Innovus static, VCD GLS+SDF 335-7835 ns, handle_glitch false",139.883,205.745,6553.613,85.5,1.7284,PASS,
+mux_isolated,tbec,5807.894,14155.949,3.984,572.429,0.0763,100.0,"cadence/ecc_mux_isolated/{summary,timing_pnr}.rpt; power_tbec.rpt","Innovus static, VCD GLS+SDF 335-7835 ns, handle_glitch false",209.656,362.696,9765.101,64.7,2.8621,PASS,0
+mux_isolated,mrsc,5807.894,14155.949,3.984,511.510,0.0768,100.0,"cadence/ecc_mux_isolated/{summary,timing_pnr}.rpt; power_mrsc.rpt","Innovus static, VCD GLS+SDF 335-7835 ns, handle_glitch false",191.421,320.012,9765.101,60.2,2.5575,PASS,
+mux_isolated,mixed,5807.894,14155.949,3.984,879.512,0.0767,100.0,"cadence/ecc_mux_isolated/{summary,timing_pnr}.rpt; power_mixed.rpt","Innovus static, VCD GLS+SDF 335-7835 ns, handle_glitch false",318.705,560.730,9765.101,91.0,4.3976,PASS,
