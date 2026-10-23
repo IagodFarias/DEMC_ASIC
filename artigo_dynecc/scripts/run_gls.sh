@@ -25,7 +25,7 @@ VCD="$ROOT/results/vcd/${TOP}_${SCENARIO}_gls.vcd"
 LOG="$ROOT/results/logs/${TOP}_${SCENARIO}_gls.log"
 # The macro must expand to a quoted string literal for $sdf_annotate.
 SDF_DEFINE="+define+SDF_FILE=\"${SDF}\""
-xrun -64bit -sv -timescale 1ns/1ps -access +rwc -top tb_ecc_bench \
+xrun -64bit -sv -timescale 1ns/1ps -access +rwc -xmlibdirname "$ROOT/xcelium.d_gls" -top tb_ecc_bench \
   "+define+DUT_MODULE=${DUT}" "$SDF_DEFINE" \
   "$CELLS/sg13g2_udp.v" "$CELLS/sg13g2_stdcell.v" \
   "$NET" "$ROOT/tb/tb_ecc_bench.sv" \
