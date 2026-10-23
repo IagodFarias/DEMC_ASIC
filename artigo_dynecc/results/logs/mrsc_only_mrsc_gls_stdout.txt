@@ -1,0 +1,306 @@
+TOOL:	xrun(64)	24.09-s001: Started on Oct 22, 2026 at 23:02:42 -03
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/verilog/sg13g2_udp.v
+	primitive worklib.ihp_latch:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff_err:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff_r_err:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff_r:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff_s_err:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff_s:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff_sr_err:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff_sr_0:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_dff_sr_1:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_latch_r:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_latch_s:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_latch_sr_0:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_latch_sr_1:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_mux2:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_mux4:v
+		errors: 0, warnings: 0
+	primitive worklib.ihp_mux8:v
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/verilog/sg13g2_stdcell.v
+	module worklib.sg13g2_a21o_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_a21o_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_a21oi_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_a21oi_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_a221oi_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_a22oi_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_and2_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_and2_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_and3_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_and3_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_and4_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_and4_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_antennanp:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_buf_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_buf_16:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_buf_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_buf_4:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_buf_8:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_decap_4:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_decap_8:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dfrbp_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dfrbp_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dfrbpq_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dfrbpq_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dlhq_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dlhr_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dlhrq_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dllr_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dllrq_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dlygate4sd1_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dlygate4sd2_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_dlygate4sd3_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_ebufn_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_ebufn_4:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_ebufn_8:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_einvn_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_einvn_4:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_einvn_8:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_fill_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_fill_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_fill_4:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_fill_8:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_inv_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_inv_16:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_inv_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_inv_4:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_inv_8:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_lgcp_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_mux2_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_mux2_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_mux4_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nand2_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nand2_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nand2b_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nand2b_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nand3_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nand3b_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nand4_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nor2_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nor2_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nor2b_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nor2b_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nor3_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nor3_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nor4_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_nor4_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_o21ai_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_or2_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_or2_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_or3_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_or3_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_or4_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_or4_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_sdfbbp_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_sdfrbp_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_sdfrbp_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_sdfrbpq_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_sdfrbpq_2:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_slgcp_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_sighold:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_tiehi:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_tielo:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_xnor2_1:v
+		errors: 0, warnings: 0
+	module worklib.sg13g2_xor2_1:v
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/results/cadence/ecc_mrsc_only/netlist_pnr.v
+	module worklib.ecc_mrsc_only:v
+		errors: 0, warnings: 0
+file: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/tb/tb_ecc_bench.sv
+	module worklib.tb_ecc_bench:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_ecc_bench
+	Reading SDF file from location "/home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/results/cadence/ecc_mrsc_only/typ.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     typ.sdf.X
+		Log file:              sdf_annotate.log
+		Backannotation scope:  tb_ecc_bench.dut
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+	Annotation completed successfully...
+	SDF statistics: 
+		 No. of Pathdelays = 2616    	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (2616/2616) 
+		 No. of Tchecks    = 0       	 No. of Disabled Tchecks    = 0        Annotated = 0.00% (0.00/0) 
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.sg13g2_mux2_1:v <0x0db4703d>
+			streams:   0, words:     0
+		worklib.sg13g2_xnor2_1:v <0x4a179d3f>
+			streams:   0, words:     0
+		worklib.sg13g2_xnor2_1:v <0x4cdf103a>
+			streams:   0, words:     0
+		worklib.sg13g2_xor2_1:v <0x44bc0886>
+			streams:   0, words:     0
+		worklib.sg13g2_xor2_1:v <0x3ebeaaf8>
+			streams:   0, words:     0
+		worklib.sg13g2_a22oi_1:v <0x27118289>
+			streams:   0, words:     0
+		worklib.sg13g2_a22oi_1:v <0x275e9f9d>
+			streams:   0, words:     0
+		worklib.sg13g2_a22oi_1:v <0x1edd21c7>
+			streams:   0, words:     0
+		worklib.sg13g2_o21ai_1:v <0x79f00fc9>
+			streams:   0, words:     0
+		worklib.sg13g2_a22oi_1:v <0x27a8e5fb>
+			streams:   0, words:     0
+		worklib.sg13g2_a22oi_1:v <0x1e6446b5>
+			streams:   0, words:     0
+		worklib.sg13g2_xnor2_1:v <0x30153f41>
+			streams:   0, words:     0
+		worklib.sg13g2_xnor2_1:v <0x36ddb244>
+			streams:   0, words:     0
+		worklib.sg13g2_a21o_1:v <0x1e048cd4>
+			streams:   0, words:     0
+		worklib.sg13g2_o21ai_1:v <0x6cb445b3>
+			streams:   0, words:     0
+		worklib.sg13g2_a221oi_1:v <0x5932bc2b>
+			streams:   0, words:     0
+		worklib.sg13g2_a21oi_1:v <0x02418160>
+			streams:   0, words:     0
+		worklib.sg13g2_a22oi_1:v <0x27e7f8ef>
+			streams:   0, words:     0
+		worklib.sg13g2_a22oi_1:v <0x1e2b5ba1>
+			streams:   0, words:     0
+		worklib.sg13g2_xor2_1:v <0x70bbae5c>
+			streams:   0, words:     0
+		worklib.sg13g2_xor2_1:v <0x0ab90c22>
+			streams:   0, words:     0
+		worklib.sg13g2_o21ai_1:v <0x2a2ae3e6>
+			streams:   0, words:     0
+		worklib.sg13g2_o21ai_1:v <0x13e640a8>
+			streams:   0, words:     0
+		worklib.tb_ecc_bench:sv <0x00def8ef>
+			streams:  14, words: 23649
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:               273      22
+		UDPs:                    1       1
+		Primitives:            587       5
+		Timing outputs:        268      14
+		Registers:              28      28
+		Scalar wires:          273       -
+		Expanded wires:         51       4
+		Initial blocks:          5       5
+		Pseudo assignments:      5       -
+		Interconnect:          690      31
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_ecc_bench:sv
+Loading snapshot worklib.tb_ecc_bench:sv .................... Done
+xcelium> source /home/tools/cadence/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+VCD_START 335.0 ns
+VCD_END 7835.0 ns
+RESULT scenario=mrsc reads=1125 writes=375 errors=0
+PASS: all decoded data match written words
+Simulation complete via $finish(1) at time 7835 NS + 0
+./tb/tb_ecc_bench.sv:112     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 22, 2026 at 23:02:42 -03  (total: 00:00:00)

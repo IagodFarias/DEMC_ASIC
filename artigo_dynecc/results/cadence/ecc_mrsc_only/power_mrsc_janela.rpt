@@ -1,0 +1,88 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Oct-22 23:03:26 (2026-Oct-23 02:03:26 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: ecc_mrsc_only
+*
+*	Liberty Libraries used: 
+*	        av_typ: /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/results/cadence/ecc_mrsc_only/routed.enc.dat/libs/mmmc/sg13g2_stdcell_typ_1p20V_25C.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:        1.2 
+*
+*       Power View : av_typ
+*
+*       User-Defined Activity : N.A.
+*
+*	Switching Activity File used: 
+*	        /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/results/vcd/mrsc_only_mrsc_gls.vcd
+*                    Vcd Window used(Start Time, Stop Time):  (335.000000,7835.000000) 
+*                     Vcd Scale Factor: 1 
+* *                    Design annotation coverage: 323/323 = 100% 
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: N.A.
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile /home/mateusmaia45/Documentos/DEMC_ASIC/artigo_dynecc/results/cadence/ecc_mrsc_only/power_mrsc.rpt
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.00003881 	    1.9733%
+Total Switching Power:       0.00006573 	    3.3418%
+Total Leakage Power:         0.00003721 	    1.8920%
+Total Glitch Power:          0.00182516 	   92.7929%
+Total Power:                 0.00196692 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Glitch       Total  Percentage 
+                                Power      Power         Power         Power        Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                             0           0           0           0           0           0 
+Macro                                  0           0           0           0           0           0 
+IO                                     0           0   1.735e-07           0   1.735e-07    0.008823 
+Combinational                  3.881e-05   6.573e-05   3.704e-05    0.001825    0.001967       99.99 
+Clock (Combinational)                  0           0           0           0           0           0 
+Clock (Sequential)                     0           0           0           0           0           0 
+-----------------------------------------------------------------------------------------
+Total                          3.881e-05   6.573e-05   3.721e-05    0.001825    0.001967         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Glitch       Total  Percentage 
+                                Power      Power         Power         Power        Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                       1.2  3.881e-05   6.573e-05   3.721e-05    0.001825    0.001967         100 
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power:               g5043__6260 (sg13g2_o21ai_1):        0.0003803 
+*                Highest Leakage Power:               g5113__1881 (sg13g2_nand4_1):        3.247e-07 
+*          Total Cap:      3.08788e-12 F
+*          Total instances in design:   271
+*          Total instances in design with no power:     0
+*          Total instances in design with no activity:     0
+*          Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+
