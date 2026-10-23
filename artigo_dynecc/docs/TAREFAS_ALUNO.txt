@@ -1,0 +1,25 @@
+SOLICITAÇÃO DE EXPERIMENTOS ASIC PARA ARTIGO IEEE TCAS-II
+
+1. Ler README_PT.md; os scripts TCL são templates e precisam ser testados
+   e eventualmente ajustados ao Genus/Innovus do laboratório.
+2. Rodar simulação funcional e de injeção: SIM=xrun scripts/run_matrix.sh.
+   NÃO avançar se falhar no-error roundtrip.
+3. Sintetizar e rotear: 4 tops (mrsc_only, tbec_only, mux_reference,
+   mux_isolated) sob PDK IHP-SG13G2 130nm, 1.20V, 25 C (TT).
+4. Gerar VCD gate-level + SDF usando scripts/run_gls.sh (8 combinações)
+   após cada PNR, e só então medir potência com o VCD GLS. Confirmar
+   escopo/cobertura do VCD e validade de SDF. Não usar VCD RTL como GLS.
+5. Enviar relatórios e CSV preenchido, além das falhas de execução.
+6. NÃO afirmar ganho energético em % se dois experimentos não tiverem
+   mesma biblioteca, corner, estímulos, intervalo e métrica de potência.
+7. Se necessário, registrar alterações no RTL/scripts e enviar diff.
+
+CENÁRIOS: MRSC_ONLY/mrsc, TBEC_ONLY/tbec,
+MUX_REFERENCE/{tbec,mrsc,mixed}, MUX_ISOLATED/{tbec,mrsc,mixed}.
+
+MEDIDAS: area logica [um2], area die [um2], delay TT [ns],
+P leakage/internal/switching/total [uW], cobertura atividade [%].
+
+OBS: código não inclui consumo SRAM, memória de tags, seleção via sensor
+radiativo, scrub, custo de reconfiguração, power gating físico. São
+extensões de sistema; não fazem parte da potência do ECC combinacional.

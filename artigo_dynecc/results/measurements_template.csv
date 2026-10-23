@@ -1,0 +1,9 @@
+variant,scenario,area_logic_um2,area_die_um2,delay_typ_ns,power_uW,leakage_uW,vcd_annotation_pct,source_report,notes
+mrsc_only,mrsc,,,,,,,,
+tbec_only,tbec,,,,,,,,
+mux_reference,tbec,,,,,,,,
+mux_reference,mrsc,,,,,,,,
+mux_reference,mixed,,,,,,,,
+mux_isolated,tbec,,,,,,,,
+mux_isolated,mrsc,,,,,,,,
+mux_isolated,mixed,,,,,,,,
