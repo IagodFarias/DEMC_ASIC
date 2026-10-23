@@ -93,7 +93,7 @@ module tb_ecc_bench;
     n_reads=0;n_writes=0;
     // Re-seed so all tests start a reproducible traffic sequence.
     rnd_state=32'h1234ABCD;
-    $dumpon;
+    $dumpon; $display("VCD_START %0.1f ns", $realtime);
     for(int i=0;i<NOPS;i++) begin
       nextrand(r);nextrand(s);
       addr=int'(r%NWORDS);
@@ -105,7 +105,7 @@ module tb_ecc_bench;
         load(addr,s[0:15]);
       end
     end
-    $dumpoff;
+    $display("VCD_END %0.1f ns", $realtime); $dumpoff;
     $display("RESULT scenario=%s reads=%0d writes=%0d errors=%0d",scenario,n_reads,n_writes,errors);
     if(errors) $fatal(1,"Functional validation FAILED");
     else $display("PASS: all decoded data match written words");

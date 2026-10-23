@@ -15,3 +15,5 @@ if {[catch {read_activity_file -format VCD -scope tb_ecc_bench/dut $vcd} detail]
 report_power -outfile "$out/power_${scenario}.rpt"
 puts "POWER_IMPORTED top=$top scenario=$scenario source=$vcd"
 # Check log for VCD annotation coverage; non-annotated nets invalidate comparisons.
+
+exit

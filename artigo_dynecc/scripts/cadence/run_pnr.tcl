@@ -56,6 +56,7 @@ verify_drc -report "$out/drc.rpt"
 verifyProcessAntenna -report "$out/antenna.rpt"
 summaryReport -noHtml -outfile "$out/summary.rpt"
 report_timing -max_paths 20 > "$out/timing_pnr.rpt"
+report_constraint -all_violators > "$out/drv.rpt"
 # Export matched gate-level netlist and SDF (derived from this same routed database).
 # The exact extraction command can vary by Innovus release; check logs.
 extractRC
@@ -65,3 +66,5 @@ write_sdf -view av_typ -recompute_delay_calc -precision 4 "$out/typ.sdf"
 saveDesign "$out/routed.enc"
 # SPEF + GDS + signoff LVS optional; do not equate tool DRC with full signoff.
 puts "PNR_OK $top $out"
+
+exit
